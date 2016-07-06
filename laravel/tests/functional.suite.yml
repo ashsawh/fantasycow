@@ -8,4 +8,6 @@ class_name: FunctionalTester
 modules:
     enabled:
         # add framework module here
+        - PhpBrowser:
+            url: 'http://fantasycow.com:6069'
         - \Helper\Functional
