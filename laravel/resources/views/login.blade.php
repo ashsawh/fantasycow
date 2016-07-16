@@ -26,8 +26,7 @@
         {{ Form::bsText('inputUsernameEmail', 'Username or Email') }}
         <div class="form-group">
           <a class="pull-right" href="#">Forgot password?</a>
-          {{ Form::label('inputPassword', 'Password') }}
-          {{ Form::password('inputPassword', [ 'id' => 'inputPassword', 'class' => 'form-control' ]) }}
+          {{ Form::bsPass('inputPassword', 'Password') }}
         </div>
         <div class="checkbox pull-right">
           <label>

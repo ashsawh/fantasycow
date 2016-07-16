@@ -15,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Form::component('bsText', 'forms.text', ['name', 'label', 'value' => null, 'attributes' => []] );
+        Form::component('bsPass', 'forms.password', ['name', 'label', 'attributes' => []] );
     }
 
     /**
