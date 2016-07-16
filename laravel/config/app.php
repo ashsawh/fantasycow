@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'version_path' => env('VERSION_PATH', 'dist/versions.json'),
+    'assets_version_path' => env('ASSETS_VERSION_PATH', 'versions/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +157,10 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        Illuminate\View\ViewServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Sawh\HtmlBuster\BusterServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -201,7 +206,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Buster' => Sawh\HtmlBuster\BusterFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

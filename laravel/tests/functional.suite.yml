@@ -8,6 +8,9 @@ class_name: FunctionalTester
 modules:
     enabled:
         # add framework module here
+        - Laravel5:
+            environment_file: .env.testing
+        - Helper\Functional
         - PhpBrowser:
             url: 'http://fantasycow.com:6069'
         - \Helper\Functional

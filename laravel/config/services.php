@@ -35,4 +35,14 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '891511546225-iou2rsm734tk3gih82c6hvi4g011bo9o.apps.googleusercontent.com',
+        'client_secret' => 'Pt_JL8S-VEAM7gNP5EQbZQbB',
+        'redirect' => 'http://fantasycow.com:6069/auth/google/callback',
+    ],
+    'twitter' => [
+        'client_id' => 'ZdLUYho0LXBZB4uwS4kpDRLZa',
+        'client_secret' => 'EHRpTkGX5qg4cNUNkLYw30SOvYGUwxPAeXk1c3FOXwU7UbIvDW',
+        'redirect' => 'http://fantasycow.com:6069/auth/twitter/callback',
+    ],
 ];

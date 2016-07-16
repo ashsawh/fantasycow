@@ -9,8 +9,8 @@
 
         <title>@yield('title')</title>
 
-        {!! Html::script('dist/js/js.min.js') !!}
-        {!! Html::style('dist/css/app.min.css') !!}
+        {!! Buster::style('dist/app_c.min.css') !!}
+        {!! Html::style('dist/app_lib_c.min.css') !!}
 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -23,6 +23,10 @@
         <footer>
             @yield('footer')
         </footer>
+
+    {!! Html::script('dist/app_c.min.js') !!}
+    {!! Html::script('dist/app_lib_c.min.js') !!}
+
     </body>
 
 </html>

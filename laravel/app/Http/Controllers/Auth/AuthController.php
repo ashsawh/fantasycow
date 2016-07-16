@@ -7,6 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -22,6 +24,7 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    #use Socialite;
 
     /**
      * Where to redirect users after login / registration.
@@ -68,5 +71,33 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function googleRedirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function googleHandleProviderCallback()
+    {
+        $user = Socialite::driver('google')->user();
+        dd($user);
+        // $user->token;
+    }
+
+    public function twitterRedirectToProvider()
+    {
+        return Socialite::driver('twitter')->redirect();
+    }
+
+    public function twitterHandleProviderCallback()
+    {
+        $user = Socialite::driver('twitter')->user();
+        dd($user);
+        // $user->token;
+    }
+
+    public function login() {
+        return '';
     }
 }
